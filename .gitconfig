@@ -1,0 +1,38 @@
+[user]
+	email = darrel.jiang.dev@gmail.com
+	name = Darrel Jiang
+
+# Include my Work-specific .gitconfig
+[includeIf "gitdir:~/work/**"]
+    path = ~/work/.gitconfig
+
+[alias]
+    aa = add --all
+    br = branch
+    bra = branch -a
+    brdl = branch -d
+    brdr = push origin --delete
+    cm = commit
+    cmm = commit -m
+    co = checkout
+    cob = checkout -b
+    up = rebase
+    pu = push -u origin HEAD
+    set = branch -u
+    st = status
+    ss = stash save
+    sp = stash pop
+    sl = stash list
+    sa = stash apply
+    last = log -1 HEAD
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    undo = reset HEAD~
+
+[core]
+    editor = subl --wait --stay
+
+[push]
+    default = simple
+
+[credential]
+    helper = osxkeychain
